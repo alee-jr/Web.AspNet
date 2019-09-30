@@ -1,0 +1,24 @@
+﻿@model  IList<Cela>
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h2>Celas</h2>
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Área</th>
+        <th>Quatidade Máxima</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.Area</td>
+            <td>@item.QuantidadeMaxima</td>
+            <td><a asp-controller="cela" asp-action="detalhesCela" asp-route-id="@item.CelaId" type="button" class="btn-default btn-primary">Detalhes</a> </td>
+        </tr>
+    }
+</table>
+

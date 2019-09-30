@@ -1,0 +1,16 @@
+﻿@model Cela
+@{
+    ViewData["Title"] = "detalhesCela";
+}
+    <form>
+        <div class="card">
+            <h5 class="card-header">Detalhes</h5>
+            <div class="card-body">
+                <h5 class="card-title">Cela- @Model.Nome</h5>
+                <p class="card-text">Área @Model.Area m²</p>
+                <p class="card-text">Qtd maxima @Model.QuantidadeMaxima Atual @ViewBag.atual</p>
+                <p class="card-text">% de Ocupação @ViewBag.porcentagem %</p>
+                <button class="btn btn-primary">Go Back</button>
+            </div>
+        </div>
+    </form>
